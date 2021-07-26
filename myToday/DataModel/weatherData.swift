@@ -24,21 +24,31 @@
 //    let icon: String?
 //}
 
+//
+//struct weatherData : Decodable {
+//    let weather: weather
+//    let main : main
+//    let name: String
+//}
+//
+//struct weather : Decodable  {
+//    let main : String
+//    let descriptions: String
+//    let icon: String
+//}
+//
+//struct main : Decodable {
+//    let temp: Int
+//    let temp_min : Int
+//    let temp_max : Int
+//}
+
 
 struct weatherData : Decodable {
-    let weather: weather
     let main : main
-    let name: String
-}
-
-struct weather : Decodable  {
-    let main : String
-    let descriptions: String
-    let icon: String
+    let name : String
 }
 
 struct main : Decodable {
-    let temp: Int
-    let temp_min : Int
-    let temp_max : Int
+    let temp: Double
 }
