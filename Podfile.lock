@@ -1,26 +1,46 @@
 PODS:
   - Alamofire (5.4.3)
+  - KakaoSDKAuth (2.5.5):
+    - KakaoSDKCommon (= 2.5.5)
+  - KakaoSDKCommon (2.5.5):
+    - KakaoSDKCommon/Common (= 2.5.5)
+    - KakaoSDKCommon/Network (= 2.5.5)
+  - KakaoSDKCommon/Common (2.5.5)
+  - KakaoSDKCommon/Network (2.5.5):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.5.5)
+  - KakaoSDKUser (2.5.5):
+    - KakaoSDKAuth (= 2.5.5)
   - NVActivityIndicatorView (5.1.1):
     - NVActivityIndicatorView/Base (= 5.1.1)
   - NVActivityIndicatorView/Base (5.1.1)
-  - SwiftyJSON (4.3.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.1)
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
   - NVActivityIndicatorView
-  - SwiftyJSON (~> 4.0)
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
     - NVActivityIndicatorView
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  KakaoSDKAuth: 7474cf67d199a9c2ec6a46e4ed8398cf34c1262d
+  KakaoSDKCommon: fb2c9223a86d6f65a8ba73bbaad7cec6a2b09630
+  KakaoSDKUser: 7bb1c38bbd4608bd4e7eebbd4eda130338364fb3
   NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 8d32e5e1db79c444c3c79251a2e56d886dde0e59
+PODFILE CHECKSUM: a71cba6dabe23b02ad0964554a56938b01f78ac9
 
 COCOAPODS: 1.10.1

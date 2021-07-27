@@ -6,9 +6,12 @@ target 'myToday' do
   use_frameworks!
 
   # Pods for myToday
-  pod 'Alamofire', '~> 5.1'  
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Alamofire', '~> 5.1'
   pod 'NVActivityIndicatorView'
+  pod 'SwiftyJSON'
+  pod 'KakaoSDKCommon'
+  pod 'KakaoSDKAuth'
+  pod 'KakaoSDKUser'
 
   target 'myTodayTests' do
     inherit! :search_paths

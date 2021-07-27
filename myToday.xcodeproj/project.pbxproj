@@ -49,6 +49,7 @@
 		78A2857EA4610B8E0E493E79 /* Pods_myTodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myTodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C8C83D523ADB86C90E36F1 /* Pods-myToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myToday.release.xcconfig"; path = "Target Support Files/Pods-myToday/Pods-myToday.release.xcconfig"; sourceTree = "<group>"; };
 		AA4FE3075EE216366D85357E /* Pods-myTodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTodayTests.release.xcconfig"; path = "Target Support Files/Pods-myTodayTests/Pods-myTodayTests.release.xcconfig"; sourceTree = "<group>"; };
+		B62A992A26B035BA007400AD /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = "../../../Downloads/kakao-ios-sdk-sample-2.5.5/KakaoOpenSDK.framework"; sourceTree = "<group>"; };
 		B62B6D7C1C4B84A355CAC0AC /* Pods-myToday-myTodayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myToday-myTodayUITests.release.xcconfig"; path = "Target Support Files/Pods-myToday-myTodayUITests/Pods-myToday-myTodayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B643336B8AFCD5FA9A828880 /* Pods_myToday_myTodayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myToday_myTodayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6AA69DD26AFD9CF0003D17B /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		A0580CA8F09FD8030776467B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B62A992A26B035BA007400AD /* KakaoOpenSDK.framework */,
 				4170C7A65682663D313B57FF /* Pods_myToday.framework */,
 				B643336B8AFCD5FA9A828880 /* Pods_myToday_myTodayUITests.framework */,
 				78A2857EA4610B8E0E493E79 /* Pods_myTodayTests.framework */,
@@ -630,15 +632,33 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK2FZR7MVH;
 				INFOPLIST_FILE = myToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"NVActivityIndicatorView\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NetLee.myToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -649,15 +669,33 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XK2FZR7MVH;
 				INFOPLIST_FILE = myToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"NVActivityIndicatorView\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = NetLee.myToday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
