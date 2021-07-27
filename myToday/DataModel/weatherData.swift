@@ -45,10 +45,21 @@
 
 
 struct weatherData : Decodable {
-    let main : main
-    let name : String
+    
+    let main : temperature?
+    let weather : [condition]?
+    let name : String?
 }
 
-struct main : Decodable {
-    let temp: Double
+struct temperature : Decodable {
+    let temp: Double?
+    let temp_min: Double?
+    let temp_max: Double?
+}
+
+struct condition : Decodable {
+    let id : Int?
+    let main: String?
+    let description: String?
+    let icon: String?
 }
