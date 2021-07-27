@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03D18FDE1F623F1A15B0CB8A /* Pods_myTodayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A2857EA4610B8E0E493E79 /* Pods_myTodayTests.framework */; };
 		29CC99F5DF326D89504316EC /* Pods_myToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4170C7A65682663D313B57FF /* Pods_myToday.framework */; };
+		B6AA69DE26AFD9CF0003D17B /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6AA69DD26AFD9CF0003D17B /* Weather.storyboard */; };
+		B6AA69E026AFDA460003D17B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AA69DF26AFDA460003D17B /* WeatherViewController.swift */; };
 		B6C910A626AE90DF001DBD37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C910A526AE90DF001DBD37 /* AppDelegate.swift */; };
 		B6C910A826AE90DF001DBD37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C910A726AE90DF001DBD37 /* SceneDelegate.swift */; };
 		B6C910AA26AE90DF001DBD37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C910A926AE90DF001DBD37 /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		AA4FE3075EE216366D85357E /* Pods-myTodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTodayTests.release.xcconfig"; path = "Target Support Files/Pods-myTodayTests/Pods-myTodayTests.release.xcconfig"; sourceTree = "<group>"; };
 		B62B6D7C1C4B84A355CAC0AC /* Pods-myToday-myTodayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myToday-myTodayUITests.release.xcconfig"; path = "Target Support Files/Pods-myToday-myTodayUITests/Pods-myToday-myTodayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B643336B8AFCD5FA9A828880 /* Pods_myToday_myTodayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myToday_myTodayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6AA69DD26AFD9CF0003D17B /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		B6AA69DF26AFDA460003D17B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		B6C910A226AE90DF001DBD37 /* myToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C910A526AE90DF001DBD37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C910A726AE90DF001DBD37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		B6C910D526AE95D9001DBD37 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B6AA69DF26AFDA460003D17B /* WeatherViewController.swift */,
 				B6C910A926AE90DF001DBD37 /* ViewController.swift */,
 			);
 			path = ViewController;
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C910AB26AE90DF001DBD37 /* Main.storyboard */,
+				B6AA69DD26AFD9CF0003D17B /* Weather.storyboard */,
 				B6C910B026AE90E0001DBD37 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -310,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C910B226AE90E0001DBD37 /* LaunchScreen.storyboard in Resources */,
+				B6AA69DE26AFD9CF0003D17B /* Weather.storyboard in Resources */,
 				B6C910AF26AE90E0001DBD37 /* Assets.xcassets in Resources */,
 				B6C910DD26AEABF5001DBD37 /* openWeatherProp.plist in Resources */,
 				B6C910AD26AE90DF001DBD37 /* Main.storyboard in Resources */,
@@ -441,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C910AA26AE90DF001DBD37 /* ViewController.swift in Sources */,
+				B6AA69E026AFDA460003D17B /* WeatherViewController.swift in Sources */,
 				B6C910A626AE90DF001DBD37 /* AppDelegate.swift in Sources */,
 				B6C910DB26AE98DB001DBD37 /* weatherInfoDataManager.swift in Sources */,
 				B6C910D926AE9612001DBD37 /* weatherData.swift in Sources */,
