@@ -11,7 +11,7 @@
         <!--Weather View Controller-->
         <scene sceneID="MuX-6J-jxf">
             <objects>
-                <viewController storyboardIdentifier="WeatherViewController" id="XaU-5U-lMi" customClass="WeatherViewController" customModule="myToday" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XaU-5U-lMi" customClass="WeatherViewController" customModule="myToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QHy-tr-Kh6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,11 +59,19 @@
                                     <constraint firstAttribute="width" constant="250" id="rdD-RD-ZJh"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLc-1s-aX2">
+                                <rect key="frame" x="184" y="783" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="exitBtn:" destination="XaU-5U-lMi" eventType="touchUpInside" id="upX-qv-ZTD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w9c-Q3-2Sh"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="WHT-kg-mFN" firstAttribute="top" secondItem="b1J-0Q-n6d" secondAttribute="bottom" constant="80" id="4BH-ue-Yz6"/>
+                            <constraint firstItem="QLc-1s-aX2" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="7zZ-vL-Gkv"/>
                             <constraint firstItem="b1J-0Q-n6d" firstAttribute="top" secondItem="mjz-Qp-NJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="GvN-vi-eU3"/>
                             <constraint firstItem="w9c-Q3-2Sh" firstAttribute="trailing" secondItem="hM2-LJ-0se" secondAttribute="trailing" constant="125" id="HoO-Gf-5T7"/>
                             <constraint firstItem="hM2-LJ-0se" firstAttribute="top" secondItem="Ndf-Az-8cU" secondAttribute="bottom" constant="120" id="Jsy-BE-1QA"/>
@@ -76,6 +84,7 @@
                             <constraint firstItem="WHT-kg-mFN" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="mLg-gB-bKL"/>
                             <constraint firstItem="hM2-LJ-0se" firstAttribute="leading" secondItem="Gtp-Yb-MiN" secondAttribute="trailing" id="p5l-nl-Mdi"/>
                             <constraint firstItem="Gtp-Yb-MiN" firstAttribute="top" secondItem="Ndf-Az-8cU" secondAttribute="bottom" constant="80" id="pZG-BS-d81"/>
+                            <constraint firstItem="QLc-1s-aX2" firstAttribute="centerY" secondItem="QHy-tr-Kh6" secondAttribute="centerY" constant="350" id="y5r-Tz-nD5"/>
                         </constraints>
                     </view>
                     <connections>

@@ -84,5 +84,11 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
         Swift.print("http://api.openweathermap.org/data/2.5/weather?lat=\(self.latt)&lon=\(self.long)&appid=d069c344f7661d1fb61fa22ea5916a84&units=metric")
     }
     
+    
+    
+    @IBAction func exitBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
