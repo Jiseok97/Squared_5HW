@@ -26,12 +26,14 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
+    // MARK: View UI Setting
     func setZPosition() {
         self.nextVCBtn.layer.zPosition = 999
         self.kakaoBtn.layer.zPosition = 999
         
     }
-    
     func setGradient() {
         self.gradientLayer = CAGradientLayer()
         self.gradientLayer.frame = self.view.bounds
@@ -42,54 +44,25 @@ class ViewController: UIViewController {
     
     
     
+    
+    // MARK: 카카오톡 로그인 버튼
     @IBAction func kakaoLoginBtn(_ sender: Any) {
-        
-        
-            UserApi.shared.loginWithKakaoAccount {( OAuthToken, error ) in
-                if let error = error {
-                    print(error)
-                }
-                else{
-                    print("성공!")
-                    
-                    
-                    _ = OAuthToken
-                }
+        UserApi.shared.loginWithKakaoAccount {( OAuthToken, error ) in
+            if let error = error {
+                print(error)
             }
-        
-        // 시뮬레이터에 카카오톡 설치 되었을 경우
-        // 카카오톡 설치 여부 확인
-//        if (UserApi.isKakaoTalkLoginAvailable()) {
-//            UserApi.shared.loginWithKakaoTalk {( OAuthToken, error ) in
-//                if let error = error {
-//                    print(error)
-//                } else {
-//                    print("로그인 성공")
-//
-//                    _ = OAuthToken
-//                }
-//            }
-//        }
-//        
-//        if (UserApi.isKakaoTalkLoginAvailable()) {
-//
-//            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-//                if let error = error {
-//                    print(error)
-//                }
-//                else {
-//                    print("loginWithKakaoAccount() Success")
-//
-//                    _ = oauthToken
-//                }
-//            }
-//        }
-        
-//
+            else{
+                print("성공!")
+                
+                _ = OAuthToken
+            }
+        }
     }
     
     
     
+    
+    // MARK: 임시 방편 페이지 넘기기
     @IBAction func changeVC(_ sender: Any) {
         let sb = UIStoryboard(name: "Weather", bundle: nil)
         guard let vc = sb.instantiateViewController(identifier: "WeatherViewController") as? WeatherViewController else { fatalError()}
