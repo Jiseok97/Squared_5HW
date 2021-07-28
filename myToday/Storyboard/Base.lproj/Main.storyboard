@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,36 +16,103 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sB-z6-1DN">
+                                <rect key="frame" x="60" y="479" width="294" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0K-TR-Wef">
+                                        <rect key="frame" x="90" y="8" width="154" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Kakao 로그인">
+                                            <color key="titleColor" red="0.18823529411764706" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="kakaoLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKN-EU-O2h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nr-EO-YID">
+                                        <rect key="frame" x="35" y="2" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="5HD-qy-OGP"/>
+                                            <constraint firstAttribute="width" constant="45" id="qz0-B6-dWX"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.18823529411764706" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="kakaoIcon">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="2nr-EO-YID" firstAttribute="leading" secondItem="6sB-z6-1DN" secondAttribute="leading" constant="35" id="0fl-lP-1Cq"/>
+                                    <constraint firstAttribute="trailing" secondItem="R0K-TR-Wef" secondAttribute="trailing" constant="50" id="46t-Gz-I39"/>
+                                    <constraint firstItem="R0K-TR-Wef" firstAttribute="leading" secondItem="2nr-EO-YID" secondAttribute="trailing" constant="10" id="bIf-8S-VTz"/>
+                                    <constraint firstAttribute="height" constant="50" id="eZC-7t-rUS"/>
+                                    <constraint firstItem="R0K-TR-Wef" firstAttribute="top" secondItem="6sB-z6-1DN" secondAttribute="top" constant="8" id="pQt-R0-Udf"/>
+                                    <constraint firstItem="2nr-EO-YID" firstAttribute="centerY" secondItem="R0K-TR-Wef" secondAttribute="centerY" id="qVf-Hj-Y9S"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vht-O5-yQh">
-                                <rect key="frame" x="184" y="733" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="60" y="414" width="294" height="50"/>
+                                <color key="backgroundColor" red="0.57254901960000004" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="noD-5i-7Z9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="로 그 인">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
                                 <connections>
                                     <action selector="changeVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zv6-QJ-Lvb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0K-TR-Wef">
-                                <rect key="frame" x="144" y="680" width="126" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="카카오톡 로그인">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="kakaoLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HKN-EU-O2h"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="패스워드 입력" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="DFD-KY-yOb">
+                                <rect key="frame" x="60" y="354" width="294" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lCa-32-0j3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 입력" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="q44-eD-9ay">
+                                <rect key="frame" x="60" y="304" width="294" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eOx-AZ-w2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cq9-19-ikA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="R0K-TR-Wef" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="250" id="1ai-tb-O1S"/>
-                            <constraint firstItem="vht-O5-yQh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="300" id="af4-Im-qga"/>
-                            <constraint firstItem="vht-O5-yQh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d0E-xp-P1T"/>
-                            <constraint firstItem="R0K-TR-Wef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eDm-9x-QuS"/>
+                            <constraint firstItem="6sB-z6-1DN" firstAttribute="top" secondItem="vht-O5-yQh" secondAttribute="bottom" constant="15" id="3YM-yY-OAq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DFD-KY-yOb" secondAttribute="trailing" constant="60" id="4RD-X3-Cls"/>
+                            <constraint firstItem="6sB-z6-1DN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="5Ce-4V-94c"/>
+                            <constraint firstItem="Cq9-19-ikA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="Eq6-Ma-Vfi"/>
+                            <constraint firstItem="q44-eD-9ay" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="FJP-5v-IYz"/>
+                            <constraint firstItem="DFD-KY-yOb" firstAttribute="top" secondItem="q44-eD-9ay" secondAttribute="bottom" constant="10" id="Geu-RT-SYf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cq9-19-ikA" secondAttribute="trailing" id="JOu-m1-sXp"/>
+                            <constraint firstItem="vht-O5-yQh" firstAttribute="top" secondItem="DFD-KY-yOb" secondAttribute="bottom" constant="20" id="Myw-i3-R9v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Cq9-19-ikA" secondAttribute="top" constant="44" id="P2f-LU-Nbi"/>
+                            <constraint firstItem="q44-eD-9ay" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="YWs-Wy-VRf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vht-O5-yQh" secondAttribute="trailing" constant="60" id="aRV-aV-zhx"/>
+                            <constraint firstItem="vht-O5-yQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="bjX-Ib-pzg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6sB-z6-1DN" secondAttribute="trailing" constant="60" id="ecp-2b-iP3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q44-eD-9ay" secondAttribute="trailing" constant="60" id="giv-VP-44s"/>
+                            <constraint firstItem="Cq9-19-ikA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qh7-0I-2Pj"/>
+                            <constraint firstItem="DFD-KY-yOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="vvF-fo-jgd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgImgView" destination="Cq9-19-ikA" id="ZHr-rY-jvZ"/>
+                        <outlet property="emailTF" destination="q44-eD-9ay" id="pZL-gS-r1Q"/>
                         <outlet property="kakaoBtn" destination="R0K-TR-Wef" id="K0o-Fs-Jxj"/>
+                        <outlet property="kakaoView" destination="6sB-z6-1DN" id="fxv-vE-teu"/>
                         <outlet property="nextVCBtn" destination="vht-O5-yQh" id="foa-Me-AtS"/>
+                        <outlet property="passwordTF" destination="DFD-KY-yOb" id="rBU-wp-Pn0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,4 +120,13 @@
             <point key="canvasLocation" x="34.782608695652179" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kakaoIcon" width="217" height="217"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

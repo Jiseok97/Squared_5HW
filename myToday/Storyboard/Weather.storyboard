@@ -66,6 +66,15 @@
                                     <action selector="exitBtn:" destination="XaU-5U-lMi" eventType="touchUpInside" id="upX-qv-ZTD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQX-7w-oN9">
+                                <rect key="frame" x="330" y="44" width="64" height="30"/>
+                                <state key="normal" title="미세먼지">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testBtn:" destination="XaU-5U-lMi" eventType="touchUpInside" id="hkW-3J-Pq3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w9c-Q3-2Sh"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -76,14 +85,17 @@
                             <constraint firstItem="w9c-Q3-2Sh" firstAttribute="trailing" secondItem="hM2-LJ-0se" secondAttribute="trailing" constant="125" id="HoO-Gf-5T7"/>
                             <constraint firstItem="hM2-LJ-0se" firstAttribute="top" secondItem="Ndf-Az-8cU" secondAttribute="bottom" constant="120" id="Jsy-BE-1QA"/>
                             <constraint firstItem="mjz-Qp-NJ9" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="Lfh-NB-mkK"/>
+                            <constraint firstItem="w9c-Q3-2Sh" firstAttribute="trailing" secondItem="VQX-7w-oN9" secondAttribute="trailing" constant="20" id="SSD-Sq-Chi"/>
                             <constraint firstItem="Ndf-Az-8cU" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="YG6-DS-hNI"/>
                             <constraint firstItem="Ndf-Az-8cU" firstAttribute="top" secondItem="WHT-kg-mFN" secondAttribute="bottom" constant="25" id="ZAc-Fr-wcG"/>
                             <constraint firstItem="Gtp-Yb-MiN" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="clL-FY-3Hs"/>
+                            <constraint firstItem="VQX-7w-oN9" firstAttribute="top" secondItem="w9c-Q3-2Sh" secondAttribute="top" id="fAk-7q-g5n"/>
                             <constraint firstItem="b1J-0Q-n6d" firstAttribute="centerX" secondItem="mjz-Qp-NJ9" secondAttribute="centerX" id="ieN-qq-RK8"/>
                             <constraint firstItem="mjz-Qp-NJ9" firstAttribute="top" secondItem="w9c-Q3-2Sh" secondAttribute="top" constant="40" id="irf-SB-Kcn"/>
                             <constraint firstItem="WHT-kg-mFN" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="mLg-gB-bKL"/>
                             <constraint firstItem="hM2-LJ-0se" firstAttribute="leading" secondItem="Gtp-Yb-MiN" secondAttribute="trailing" id="p5l-nl-Mdi"/>
                             <constraint firstItem="Gtp-Yb-MiN" firstAttribute="top" secondItem="Ndf-Az-8cU" secondAttribute="bottom" constant="80" id="pZG-BS-d81"/>
+                            <constraint firstItem="VQX-7w-oN9" firstAttribute="leading" secondItem="w9c-Q3-2Sh" secondAttribute="leading" constant="330" id="sXL-Db-5ah"/>
                             <constraint firstItem="QLc-1s-aX2" firstAttribute="centerY" secondItem="QHy-tr-Kh6" secondAttribute="centerY" constant="350" id="y5r-Tz-nD5"/>
                         </constraints>
                     </view>
@@ -91,8 +103,10 @@
                         <outlet property="conditionImgView" destination="WHT-kg-mFN" id="glD-OT-T4q"/>
                         <outlet property="conditionLbl" destination="Ndf-Az-8cU" id="Jpi-JN-rJz"/>
                         <outlet property="dayLbl" destination="b1J-0Q-n6d" id="PXk-Bq-OcL"/>
+                        <outlet property="forZPositionBtn" destination="hM2-LJ-0se" id="bwd-on-TRc"/>
                         <outlet property="locationLbl" destination="mjz-Qp-NJ9" id="Qyl-lC-bDc"/>
                         <outlet property="temperatureLbl" destination="Gtp-Yb-MiN" id="VDf-ep-n1n"/>
+                        <outlet property="testBtn" destination="VQX-7w-oN9" id="lmf-Cy-PcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEQ-Xq-xlF" sceneMemberID="firstResponder"/>
