@@ -11,7 +11,7 @@ API Data & Alamofire
 금일 날씨, 미세먼지 및 대기환경 관련 정보
 
 ## Developer
-iOS_Jiseok97
+iOS_Jiseok97 (by Swift)
 
 
 ### 토큰 오류로 인해 Commit이 다 되진 않음
