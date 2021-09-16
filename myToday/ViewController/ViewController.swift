@@ -18,14 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextVCBtn: UIButton!
     @IBOutlet weak var kakaoBtn: UIButton!
     @IBOutlet weak var kakaoView: UIView!
-    @IBOutlet weak var bgImgView: UIImageView!
+    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var logoImg: UIImageView!
+    @IBOutlet weak var bgImage: UIImageView!
     
     var gradientLayer : CAGradientLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setGradient()
         setUI()
     }
     
@@ -35,24 +36,15 @@ class ViewController: UIViewController {
         self.kakaoView.layer.zPosition = 999
         self.emailTF.layer.zPosition = 999
         self.passwordTF.layer.zPosition = 999
+        self.logoImg.layer.zPosition = 999
+        self.bgImageView.layer.zPosition = 0
+        self.bgImageView.image = UIImage(named: "splashImg")
         
-        self.bgImgView.image = UIImage(named: "bgImg")
+        
+        
         self.kakaoView.layer.cornerRadius = 20
         self.nextVCBtn.layer.cornerRadius = 20
     }
-    
-    
-    // MARK: Gradient
-//    func setGradient() {
-//        self.gradientLayer = CAGradientLayer()
-//        self.gradientLayer.frame = self.view.bounds
-//        self.gradientLayer.colors = [ UIColor.systemTeal.cgColor,
-//                                   UIColor.systemGreen.cgColor,
-//                                   UIColor.white.cgColor]
-//        self.view.layer.addSublayer(self.gradientLayer)
-//    }
-    
-    
     
     
     
@@ -85,7 +77,6 @@ class ViewController: UIViewController {
     @IBAction func changeVC(_ sender: Any) {
         let sb = UIStoryboard(name: "Weather", bundle: nil)
         guard let vc = sb.instantiateViewController(identifier: "WeatherViewController") as? WeatherViewController else { fatalError()}
-//        let navi = UINavigationController(rootViewController: WeatherViewController)
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
         

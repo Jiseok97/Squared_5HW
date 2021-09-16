@@ -10,15 +10,39 @@ struct airPollutionData : Decodable {
 }
 
 struct response : Decodable {
-    var item : [item]?
+    var body: body
+    var header : header
 }
 
-struct item : Decodable {
-    var pm10Value : Int?
-    var pn10Grade : Int?
+struct header : Decodable {
+    var resultMsg : String
+    var resultCode : String
+}
+
+struct body : Decodable {
+    var totalCount : Int
+    var items : [items]?
+    var pageNo: Int
+    var numOfRows : Int
+}
+
+struct items : Decodable {
+    var pm10Value : String?
+    var pn10Grade : String?
     var sidoName : String?
-    var pm25Value : Int?
-    var pm25Grade : Int?
+    var pm25Value : String?
+    var pm25Grade : String?
     
-    var so2Grade : Int?
+    var so2Grade : String?
+    var khaiValue : String?
+    var so2Value : String?
+    var coValue : String?
+    var o3Grade : String?
+    var khaiGrade : String?
+    var no2Grade : String?
+    var dataTime: String?
+    var coGrade : String?
+    var no2Value : String?
+    var stationName: String?
+    var o3Value : String?
 }

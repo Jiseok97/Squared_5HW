@@ -9,7 +9,6 @@ import UIKit
 import Alamofire
 import CoreLocation
 
-
 class WeatherViewController: UIViewController, CLLocationManagerDelegate{
     
     let locationManager = CLLocationManager()
@@ -39,6 +38,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
         setupLocation()
         setZPosition()
     }
+    
+    // MARK: SETTING ZPOSITION
     func setZPosition() {
         self.locationLbl.layer.zPosition = 999
         self.dayLbl.layer.zPosition = 999
@@ -96,12 +97,11 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
                 self.conditionImgView.image = UIImage(named: (response.weather?[0].icon!)!)
                 
                 let change = response.weather?[0].icon!.suffix(1)
-                if (change == "d") {
+                if (change == "n") {
                     self.setDarkGradient()
                 } else {
                     self.setLightGradient()
                 }
-                
                 
             case .failure(let error):
                 Swift.print("실패")
@@ -110,6 +110,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
         }
         Swift.print("http://api.openweathermap.org/data/2.5/weather?lat=\(self.latt)&lon=\(self.long)&appid=d069c344f7661d1fb61fa22ea5916a84&units=metric")
     }
+    
+    
     
     // MARK: 그라데이션
     func setLightGradient() {
@@ -122,7 +124,9 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
     func setDarkGradient() {
         self.gradientLayer = CAGradientLayer()
         self.gradientLayer.frame = self.view.bounds
-        self.gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.darkGray.cgColor]
+        self.gradientLayer.colors = [UIColor.darkGray.cgColor,
+                                     UIColor.lightGray.cgColor,
+                                     UIColor.darkGray.cgColor]
         self.view.layer.addSublayer(self.gradientLayer)
     }
     
@@ -136,14 +140,14 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
     }
     
     
+    // MARK: MOVE AIRPOLLUTION VC
     @IBAction func testBtn(_ sender: Any) {
         let sb = UIStoryboard(name: "AirPollution", bundle: nil)
         guard let vc = sb.instantiateViewController(identifier: "AirPollutionViewController") as? AirPollutionViewController else { fatalError()}
+        
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
-
     }
-    
     
 }
 

@@ -198,9 +198,9 @@
 		B6C910D626AE95E7001DBD37 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B6C910B026AE90E0001DBD37 /* LaunchScreen.storyboard */,
 				B6C910AB26AE90DF001DBD37 /* Main.storyboard */,
 				B6AA69DD26AFD9CF0003D17B /* Weather.storyboard */,
-				B6C910B026AE90E0001DBD37 /* LaunchScreen.storyboard */,
 				B62E220126B1BBEE00FD2B64 /* AirPollution.storyboard */,
 			);
 			path = Storyboard;
@@ -640,7 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XK2FZR7MVH;
 				INFOPLIST_FILE = myToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -677,7 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XK2FZR7MVH;
 				INFOPLIST_FILE = myToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
