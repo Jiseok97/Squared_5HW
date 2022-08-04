@@ -12,6 +12,3 @@ API Data & Alamofire
 
 ## Developer
 iOS_Jiseok97 (by Swift)
-
-
-### 토큰 오류로 인해 Commit이 다 되진 않음
