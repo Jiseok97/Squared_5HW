@@ -56,18 +56,22 @@ class ViewController: UIViewController {
             }
             else{
                 print("성공!")
-
                 // MARK: Token
-                UserApi.shared.accessTokenInfo {( AccessTokenInfo, error) in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-                        print("show Token")
-                        _ = AccessTokenInfo
-                    }
-                }
+//                UserApi.shared.accessTokenInfo {( AccessTokenInfo, error) in
+//                    if let error = error {
+//                        print(error)
+//                    }
+//                    else {
+//                        print("show Token")
+//                        _ = AccessTokenInfo
+//                    }
+//                }
+                
                 _ = OAuthToken
+                
+               let vc = TestViewController()
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: true)
             }
         }
     }

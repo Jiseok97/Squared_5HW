@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,17 +38,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtp-Yb-MiN">
-                                <rect key="frame" x="167" y="616.5" width="80" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtp-Yb-MiN">
+                                <rect key="frame" x="127" y="616.5" width="160" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="LBp-zy-Xc5"/>
+                                    <constraint firstAttribute="width" constant="160" id="LBp-zy-Xc5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="℃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-LJ-0se">
-                                <rect key="frame" x="247" y="656.5" width="42" height="21"/>
+                                <rect key="frame" x="287" y="656.5" width="20" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -87,9 +88,9 @@
                             <constraint firstItem="w9c-Q3-2Sh" firstAttribute="bottom" secondItem="VQX-7w-oN9" secondAttribute="bottom" id="0an-gb-FDA"/>
                             <constraint firstItem="w9c-Q3-2Sh" firstAttribute="bottom" secondItem="QLc-1s-aX2" secondAttribute="bottom" id="0bI-49-09g"/>
                             <constraint firstItem="WHT-kg-mFN" firstAttribute="top" secondItem="b1J-0Q-n6d" secondAttribute="bottom" constant="80" id="4BH-ue-Yz6"/>
+                            <constraint firstItem="VQX-7w-oN9" firstAttribute="leading" secondItem="Gtp-Yb-MiN" secondAttribute="trailing" constant="-23" id="FHQ-32-Zi4"/>
                             <constraint firstItem="b1J-0Q-n6d" firstAttribute="top" secondItem="mjz-Qp-NJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="GvN-vi-eU3"/>
                             <constraint firstItem="QLc-1s-aX2" firstAttribute="top" secondItem="w9c-Q3-2Sh" secondAttribute="top" id="H7Q-bX-4V1"/>
-                            <constraint firstItem="w9c-Q3-2Sh" firstAttribute="trailing" secondItem="hM2-LJ-0se" secondAttribute="trailing" constant="125" id="HoO-Gf-5T7"/>
                             <constraint firstItem="hM2-LJ-0se" firstAttribute="top" secondItem="Ndf-Az-8cU" secondAttribute="bottom" constant="120" id="Jsy-BE-1QA"/>
                             <constraint firstItem="mjz-Qp-NJ9" firstAttribute="centerX" secondItem="QHy-tr-Kh6" secondAttribute="centerX" id="Lfh-NB-mkK"/>
                             <constraint firstItem="QLc-1s-aX2" firstAttribute="leading" secondItem="w9c-Q3-2Sh" secondAttribute="leading" id="MrZ-bp-rOO"/>
@@ -123,7 +124,7 @@
     <resources>
         <image name="01d" width="512" height="512"/>
         <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

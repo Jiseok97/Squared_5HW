@@ -78,20 +78,36 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
             requestWeatherForLoction()
         }
     }
+    
+    // MARK: API
     func requestWeatherForLoction() {
         guard let currentLocation = currentLocation else {
             return
         }
+        
         self.long = currentLocation.coordinate.longitude
         self.latt = currentLocation.coordinate.latitude
+        print("long = \(long)")
+        print("latt = \(latt)")
+        let appApiKey = "d069c344f7661d1fb61fa22ea5916a84"
         
-        AF.request("http://api.openweathermap.org/data/2.5/weather?lat=\(self.latt)&lon=\(self.long)&appid=d069c344f7661d1fb61fa22ea5916a84&units=metric", method: .get).validate().responseDecodable(of: weatherData.self) { response in
+        let url = "http://api.openweathermap.org/data/2.5/weather?lat=\(self.latt)&lon=\(self.long)&appid=\(appApiKey)&units=metric"
+        
+
+        
+        AF.request(url, method: .get, parameters: nil, headers: nil)
+            .responseDecodable(of: weatherData.self) { response in
             switch response.result {
             case .success(let response):
-                var temp : Int = 0
-                temp = Int((response.main?.temp)!)
                 
-                self.temperatureLbl.text = "\(temp)"
+                if response.main?.temp == nil {
+                    self.temperatureLbl.text = "조회 불가"
+                } else {
+                    guard let temp = response.main?.temp else { return }
+                    self.temperatureLbl.text = "\(temp)"
+                }
+                
+//                self.temperatureLbl.text = "\(temp)"
                 self.locationLbl.text = response.name
                 self.conditionLbl.text = (response.weather?[0].main!)!
                 self.conditionImgView.image = UIImage(named: (response.weather?[0].icon!)!)

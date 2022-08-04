@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03D18FDE1F623F1A15B0CB8A /* Pods_myTodayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A2857EA4610B8E0E493E79 /* Pods_myTodayTests.framework */; };
 		29CC99F5DF326D89504316EC /* Pods_myToday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4170C7A65682663D313B57FF /* Pods_myToday.framework */; };
+		B60BD0C1277DEAA600928CBD /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60BD0BF277DEAA600928CBD /* TestViewController.swift */; };
+		B60BD0C2277DEAA600928CBD /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60BD0C0277DEAA600928CBD /* TestViewController.xib */; };
 		B62E220026B1B08900FD2B64 /* airPollutionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E21FF26B1B08900FD2B64 /* airPollutionData.swift */; };
 		B62E220226B1BBEE00FD2B64 /* AirPollution.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62E220126B1BBEE00FD2B64 /* AirPollution.storyboard */; };
 		B62E220426B1BBFC00FD2B64 /* AirPollutionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62E220326B1BBFC00FD2B64 /* AirPollutionViewController.swift */; };
@@ -51,6 +53,8 @@
 		78A2857EA4610B8E0E493E79 /* Pods_myTodayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myTodayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C8C83D523ADB86C90E36F1 /* Pods-myToday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myToday.release.xcconfig"; path = "Target Support Files/Pods-myToday/Pods-myToday.release.xcconfig"; sourceTree = "<group>"; };
 		AA4FE3075EE216366D85357E /* Pods-myTodayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTodayTests.release.xcconfig"; path = "Target Support Files/Pods-myTodayTests/Pods-myTodayTests.release.xcconfig"; sourceTree = "<group>"; };
+		B60BD0BF277DEAA600928CBD /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B60BD0C0277DEAA600928CBD /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		B62A992A26B035BA007400AD /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = "../../../Downloads/kakao-ios-sdk-sample-2.5.5/KakaoOpenSDK.framework"; sourceTree = "<group>"; };
 		B62B6D7C1C4B84A355CAC0AC /* Pods-myToday-myTodayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myToday-myTodayUITests.release.xcconfig"; path = "Target Support Files/Pods-myToday-myTodayUITests/Pods-myToday-myTodayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B62E21FF26B1B08900FD2B64 /* airPollutionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airPollutionData.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				B6C910AE26AE90E0001DBD37 /* Assets.xcassets */,
 				B6C910B326AE90E0001DBD37 /* Info.plist */,
 				B6C910DC26AEABF5001DBD37 /* openWeatherProp.plist */,
+				B60BD0BF277DEAA600928CBD /* TestViewController.swift */,
+				B60BD0C0277DEAA600928CBD /* TestViewController.xib */,
 			);
 			path = myToday;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				B62E220226B1BBEE00FD2B64 /* AirPollution.storyboard in Resources */,
 				B6C910AF26AE90E0001DBD37 /* Assets.xcassets in Resources */,
 				B6C910DD26AEABF5001DBD37 /* openWeatherProp.plist in Resources */,
+				B60BD0C2277DEAA600928CBD /* TestViewController.xib in Resources */,
 				B6C910AD26AE90DF001DBD37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +465,7 @@
 			files = (
 				B6C910AA26AE90DF001DBD37 /* ViewController.swift in Sources */,
 				B62E220426B1BBFC00FD2B64 /* AirPollutionViewController.swift in Sources */,
+				B60BD0C1277DEAA600928CBD /* TestViewController.swift in Sources */,
 				B6AA69E026AFDA460003D17B /* WeatherViewController.swift in Sources */,
 				B6C910A626AE90DF001DBD37 /* AppDelegate.swift in Sources */,
 				B6C910D926AE9612001DBD37 /* weatherData.swift in Sources */,

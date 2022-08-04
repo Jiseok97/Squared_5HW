@@ -190,16 +190,26 @@ class AirPollutionViewController: UIViewController {
     // MARK: GET DATA BY API
     func requestAirPollutionForLoction() {
         
-        AF.request(self.url, method: .get, parameters: self.parameters).validate().responseDecodable(of: airPollutionData.self) { response  in
+        AF.request(self.url, method: .get, parameters: self.parameters)
+            .validate()
+            .responseDecodable(of: airPollutionData.self) { response  in
             switch response.result {
             case .success(let response):
                 let result = response.response.body
+                let no2Value = result.items?[0].no2Value ?? "조회 불가"
                 self.pm10ValueLbl.text = (result.items?[0].pm10Value!)! + "㎍/㎥"
                 self.o3ValueLbl.text = (result.items?[0].o3Value!)! + "ppm"
                 self.co2ValueLbl.text = (result.items?[0].coValue)! + "ppm"
-                self.no2ValueLbl.text = (result.items?[0].no2Value!)! + "ppm"
-                print(result.items?[0].khaiGrade)
+//                self.no2ValueLbl.text = (result.items?[0].no2Value!)! + "ppm"
+                self.no2ValueLbl.text = no2Value + "ppm"
+                
+                print(result.items?[0].khaiGrade ?? "조회불가")
+                
+                
 //
+//                guard let grade = result.items?[0].khaiGrade else { return }
+//                print(grade)
+
                 self.setImage((result.items?[0].khaiGrade)!)
                 self.setO3Image((result.items?[0].o3Grade!)!)
                 self.setCo2Image((result.items?[0].coGrade!)!)
